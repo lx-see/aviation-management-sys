@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="48954758-bbbb-4d22-b188-071fd82aa7c7">
+	<parameter name="reportTitle" class="java.lang.String"/>
+	<parameter name="fromDate" class="java.lang.String"/>
+	<parameter name="toDate" class="java.lang.String"/>
+	<parameter name="departmentName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="flightId" class="java.lang.Integer"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="sourceAirport" class="java.lang.String"/>
+	<field name="destAirport" class="java.lang.String"/>
+	<field name="scheduledDeparture" class="java.lang.String"/>
+	<field name="departureDelay" class="java.lang.String"/>
+	<field name="scheduledTime" class="java.lang.String"/>
+	<field name="scheduledArrival" class="java.lang.String"/>
+	<field name="airline" class="java.lang.String"/>
+	<field name="tailNumber" class="java.lang.String"/>
+	<field name="departureTime" class="java.lang.String"/>
+	<field name="elapsedTime" class="java.lang.String"/>
+	<field name="arrivalTime" class="java.lang.String"/>
+	<field name="arrivalDelay" class="java.lang.String"/>
+	<field name="distance" class="java.lang.Integer"/>
+	<field name="diverted" class="java.lang.String"/>
+	<field name="cancelled" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="30" width="100" height="30" uuid="71859b66-abd0-4556-adbf-fb12091aba5d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reportTitle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="0" width="100" height="30" uuid="b4a686b2-d9d9-4436-bea6-1c235059d7ab"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Report Title:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="30" width="160" height="30" uuid="b74af2d3-0e3b-4929-a00e-7311edab7a56"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{departmentName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="0" width="160" height="30" uuid="4ef3efdf-9a96-46e6-a0a7-4194d68ce020"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Created by Department:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-10" y="-9" width="90" height="30" uuid="5010d578-beca-4c0e-a7c8-e4131eb69c6a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[From Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="-9" width="110" height="30" uuid="2a9009a4-fd6e-40fc-9e68-bacc3d43a272"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fromDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="-9" width="80" height="30" uuid="718a1f4f-76b4-4b06-8cbf-be6619e1fcf3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[To Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="270" y="-9" width="100" height="30" uuid="2d1d43f7-48fa-476f-9751-dbe340084a43"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{toDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="20" width="30" height="40" uuid="1f5cefb6-bf34-44fd-9d68-c7fbd895c9e1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Flight ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="20" width="40" height="40" uuid="3add7972-11c7-49be-b310-0f5c5c85214c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="20" width="30" height="40" uuid="28f70f39-12cb-4168-a424-5b866c41aeaa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Source Airport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="20" width="30" height="40" uuid="05182c64-a6e3-427f-b5a3-3392cea9b3ad">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Destination Airport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="20" width="40" height="40" uuid="6f264765-55e1-4634-856c-a0ff7642741a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Scheduled Departure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="20" width="38" height="40" uuid="afafc208-fc63-43c4-b487-dbd7a57c819e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Departure Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="20" width="30" height="40" uuid="3d80f804-ac4f-48c8-9432-74a83187d5f7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Departure Delay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="20" width="30" height="40" uuid="2df01e83-0a8c-4b05-ac92-b4555f7c7f9a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Scheduled Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="21" width="40" height="40" uuid="6515cda5-250d-4bb7-bd66-757e9af992bd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Scheduled Arrival]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="21" width="40" height="40" uuid="c3d555de-90cf-48d9-89f4-7ba9913f0b6c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Arrival Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="21" width="30" height="40" uuid="bda46c15-56f2-47d1-a7b8-d342a94de2af">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Arrival Delay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="21" width="34" height="40" uuid="bcbe8a83-8c4d-4833-94b5-997029752656">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Elapsed Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="21" width="30" height="40" uuid="998a481c-78d6-40ed-a20f-d466b856fcee">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Airline]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="20" width="46" height="40" uuid="e5761cfa-1b02-4019-9e4f-b29d1fdee783">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Tail Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="20" width="30" height="40" uuid="647809fd-2d1f-438f-aac6-b832145c826a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Distance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="20" width="30" height="40" uuid="24f0c201-43be-4778-90c1-c948e5c40007">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Diverted]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="20" width="30" height="40" uuid="5d9640ff-0e57-4f3e-997c-827068fdaf8a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cancelled]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="-11" y="-1" width="30" height="30" uuid="8f6b61b5-0224-4abd-9388-1cadac5543c8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{flightId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="19" y="-1" width="40" height="30" uuid="dd1fab8c-37a5-430d-a0c0-7256a628a8f0"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="-1" width="30" height="30" uuid="319464ac-7b64-4ba8-b070-e07c991340fa"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sourceAirport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="0" width="30" height="30" uuid="52936f2e-6611-4a65-9351-df50959e1932"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{destAirport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="40" height="30" uuid="6aa698a3-b222-43a8-a7c3-765c0ca4ac72"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scheduledDeparture}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="0" width="38" height="30" uuid="8ad45922-85b4-4edb-b0da-d32643f899e1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{departureTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="-1" width="30" height="30" uuid="f2ce40bb-4015-4589-bbee-43426fe2dd3e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{departureDelay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="-1" width="30" height="30" uuid="de63f0d9-adf9-4e7b-abe5-4dbb13f5acd3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scheduledTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="40" height="30" uuid="cf61a325-db19-4bed-806d-41a810b70ce1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scheduledArrival}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="1" width="40" height="30" uuid="a3e676b4-4e0f-4f52-b7fd-b93903339e9d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arrivalTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="1" width="30" height="30" uuid="f9755a80-9498-4fb0-af67-86c1fab8cff5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arrivalDelay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="34" height="30" uuid="14a29803-d676-46b7-a78b-83b159c55ec9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{elapsedTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="30" height="30" uuid="be3bc9c2-fa48-467a-b3c8-c98393273ade"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{airline}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="46" height="30" uuid="23800af0-5542-4a58-b68a-0c0aed11779e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tailNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="30" height="30" uuid="82d81e2a-54d4-46ba-9227-b1e1d7f31182"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{distance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="30" height="30" uuid="339aa818-12f9-4215-bff9-0faf89e347ca"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diverted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="0" width="30" height="30" uuid="8071dec5-b2f2-4bd1-99b6-c3fe2818b5fc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cancelled}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

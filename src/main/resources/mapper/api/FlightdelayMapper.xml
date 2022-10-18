@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.groupone.aviationsys.api.mapper.FlightdelayMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.groupone.aviationsys.api.entity.Flightdelay">
+        <id column="flightId" property="flightId" />
+        <result column="year" property="year" />
+        <result column="month" property="month" />
+        <result column="day" property="day" />
+        <result column="dayOfWeek" property="dayOfWeek" />
+        <result column="sourceAirportIATA" property="sourceAirportIATA" />
+        <result column="destAirportIATA" property="destAirportIATA" />
+        <result column="scheduledDeparture" property="scheduledDeparture" />
+        <result column="departureDelay" property="departureDelay" />
+        <result column="taxiOut" property="taxiOut" />
+        <result column="wheelsOff" property="wheelsOff" />
+        <result column="scheduledTime" property="scheduledTime" />
+        <result column="airTime" property="airTime" />
+        <result column="distance" property="distance" />
+        <result column="wheelsOn" property="wheelsOn" />
+        <result column="taxiIn" property="taxiIn" />
+        <result column="scheduledArrival" property="scheduledArrival" />
+        <result column="diverted" property="diverted" />
+        <result column="cancelled" property="cancelled" />
+        <result column="cancellationReason" property="cancellationReason" />
+        <result column="airSysDelay" property="airSysDelay" />
+        <result column="securityDelay" property="securityDelay" />
+        <result column="airlineDelay" property="airlineDelay" />
+        <result column="lateAircraftDelay" property="lateAircraftDelay" />
+        <result column="weatherDelay" property="weatherDelay" />
+        <result column="airlineIATA" property="airlineIATA" />
+        <result column="tailNumber" property="tailNumber" />
+    </resultMap>
+
+</mapper>
